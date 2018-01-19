@@ -1,7 +1,0 @@
-.idea
-/build/
-out/
-gradle-app.setting
-!gradle-wrapper.jar
-.gradletasknamecache
-node_modules

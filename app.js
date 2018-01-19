@@ -2,7 +2,7 @@
 module.exports = {
 	name: 'application',
 	version: '1.0.0',
-	autor: 'Tymur'
+    author: 'Tymur'
 }
 
 // global modules and setup
@@ -20,7 +20,7 @@ const analysis = require('./analysis');
 
 // testing local modules
 function test_module(module) {
-	console.log(`Loaded module: ${module.name} [${module.version}] (${module.autor})`);
+	console.log(`Loaded module: ${module.name} [${module.version}] (${module.author})`);
 }
 test_module(crud);
 test_module(api);
@@ -42,11 +42,11 @@ app.get("/statistic", function(request, response){
 	});
 });
 
-// takes json with result and send 2 new mems
+// takes json with result and send 2 new memes
 app.post("/next", jsonParser, function(request, response){
 	if(!request.body) return response.sendStatus(400);
 	response.json({
-		test: '2 new mems'
+		test: '2 new memes'
 	});
 });
 
