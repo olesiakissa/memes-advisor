@@ -26,6 +26,9 @@ test_module(crud);
 test_module(api);
 test_module(analysis);
 
+api.getMemesFromReddit.then(result => console.log(result)).catch(e => console.error('api query error', e.stack));
+
+
 // set static resources
 app.use(express.static(path.join(__dirname, 'public')));
 
