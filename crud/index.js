@@ -6,6 +6,7 @@ module.exports = {
 }
 
 const fs = require("fs");
+const path = "crud/data/example.json";
 
 // Receives Set and parses it to json
 module.exports.handleDataSet = function (dataSet) {
@@ -22,16 +23,16 @@ module.exports.handleJson = function () {
     return dataSet
 };
 
-//Writes JSON to file
+// Writes JSON to file
 function saveToFile(jsonData) {
-    fs.writeFile('crud/data/example.json', jsonData, function (err) {
+    fs.writeFile(path, jsonData, function (err) {
         if (err) {
             return console.error(err);
-        }-
+        }
     });
 }
 
-//Gets JSON from file
+// Gets JSON from file
 function getFromFile() {
-    return fs.readFileSync('crud/data/example.json', 'utf8');
+    return fs.readFileSync(path, 'utf8');
 }
