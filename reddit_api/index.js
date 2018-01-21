@@ -23,9 +23,12 @@ module.exports.getMemesFromReddit = new Promise((resolve, reject) => {
 				let length = children.length;
 				for (var i = 0; i < length; i++) {
 					let objPost = {};
+                    objPost.id = children[i].data.id;
+                    objPost.title = children[i].data.title;
 					objPost.url = children[i].data.url;
-					objPost.title = children[i].data.title;
-					objPost.subreddit = children[i].data.subreddit;
+                    objPost.likes = 0;
+                    objPost.views = 0;
+                    objPost.stats = 0;
 					posts.add(objPost);
 				}
 				// children.forEach(function(item) {
@@ -47,9 +50,9 @@ module.exports.getMemesFromReddit = new Promise((resolve, reject) => {
 /////////////////server/////////////////
 // var http = require("http");
 // http.createServer(function(request,response){
-     
+
     // response.end('Memes Squad ');
-     
+
 // }).listen(8080, "ec2-52-15-225-70.us-east-2.compute.amazonaws.com", function(){
     // console.log("started listening to 8080 ec2-52-15-225-70.us-east-2.compute.amazonaws.com");
 // });
