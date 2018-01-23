@@ -1,3 +1,15 @@
-body {
-    background: linear-gradient(rgb(237, 237, 237), rgb(160, 160, 160));
+@font-face {
+    font-family: "Slim Joe";
+    src: url(../../public/fonts/Slim_Joe.otf);
+}
+
+@font-face {
+    font-family: "Alcubierre";
+    src: url(../../public/fonts/Alcubierre.otf);
+}
+
+#header-top-line {
+    font-family: "Slim Joe", serif;
+    font-size: 1.875em;
+    color: rgb(249, 129, 191);
 }

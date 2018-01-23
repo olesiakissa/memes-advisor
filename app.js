@@ -12,7 +12,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const jsonParser = bodyParser.json();
 const hbs = require("hbs");
+app.set('views', __dirname + '/views');
 app.set("view engine", "hbs");
+app.use(express.static(__dirname + '/public'));
 
 // local modules
 const crud = require('./crud');
