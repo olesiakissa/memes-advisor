@@ -1,15 +1,48 @@
 @font-face {
-    font-family: "Slim Joe";
+    font-family: 'Slim Joe';
     src: url(../../public/fonts/Slim_Joe.otf);
 }
 
 @font-face {
-    font-family: "Alcubierre";
+    font-family: 'Big John';
+    src: url(../../public/fonts/BIG_JOHN.otf);
+}
+
+@font-face {
+    font-family: 'Alcubierre';
     src: url(../../public/fonts/Alcubierre.otf);
 }
 
+
 #header-top-line {
-    font-family: "Slim Joe", serif;
-    font-size: 1.875em;
+    font-family: 'Alcubierre', sans-serif;
+    font-size: 6.563em;
+    font-weight: 100;
     color: rgb(249, 129, 191);
+    margin-top: 30px;
+}
+
+#header-bottom-line {
+    font-family: 'Big John', sans-serif;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(249, 129, 191);
+    letter-spacing: 0.013em;
+    margin: -15px 0 50px 170px;
+}
+
+footer {
+    width: 100vw;
+    position: fixed;
+    margin-bottom: 130px;
+    height: 70px;
+    background-color: rgb(215, 215, 215);
+}
+
+footer p {
+    font-family: 'Slim Joe', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.8);
 }
