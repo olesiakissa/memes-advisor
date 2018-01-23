@@ -11,12 +11,21 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
 const jsonParser = bodyParser.json();
+const hbs = require("hbs");
 app.set("view engine", "hbs");
 
 // local modules
 const crud = require('./crud');
 const api = require('./reddit_api');
 const analysis = require('./analysis');
+
+// set partials
+hbs.registerPartials(__dirname + "/views/partials");
+
+// test partials
+app.get("/testpartials", function (request, response) {
+    response.render("home.hbs");
+});
 
 // testing local modules
 function test_module(module) {
