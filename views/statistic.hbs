@@ -11,9 +11,14 @@
 {{> header}}
 {{> bottomheader}}
 {{> columns}}
+<div class="column center">
 {{#each memes}}
-	<img class="meme-pic" src="{{this.url}}"></img>{{this.stats}}
+	<div class="row center" style="margin: 20px;">
+		<img class="meme-pic" src="{{this.url}}"></img>
+		<div style="margin: 20px; font-family: 'Alcubierre', sans-serif; font-size: 2em;">{{this.stats}}%</div>
+	</div>
 {{/each}}
 {{> footer}}
+</div>
 </body>
 </html>

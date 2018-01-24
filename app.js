@@ -65,7 +65,7 @@ app.get("/statistic", function(request, response){
 		stats[i] = {};
         stats[i].id = array[i].id;
         stats[i].url = array[i].url;
-        stats[i].stats = array[i].stats;
+        stats[i].stats = (array[i].stats*100).toFixed(1);
     }
 	response.render('statistic.hbs',{
 		title: 'memes-advisor: statistic',
