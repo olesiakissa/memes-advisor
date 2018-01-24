@@ -18,27 +18,60 @@
 /* HEADER */
 #header-top-line {
     font-family: 'Alcubierre', sans-serif;
-    font-size: 6.563em;
+    font-size: 5.5em;
     font-weight: 100;
     color: rgb(249, 129, 191);
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 #header-bottom-line {
     font-family: 'Big John', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.125em;
     font-weight: 900;
     color: rgb(255, 255, 255);
     -webkit-text-stroke: 0.125px rgb(249, 129, 191);
     letter-spacing: 0.013em;
-    margin: -15px 0 50px 170px;
+    margin: -20px 0 50px 170px;
 }
 
 #bottom-header {
-    width: 100vw;
-    margin: 0 auto;
+    z-index: -1;
+    width: 75%;
+   /* margin: 0 auto 5% auto;*/
     position: absolute;
-    background: url(../img/lines.png);
+    top: 25%;
+    height: 100px;
+    background-size: contain;
+    background: url(../img/lines.png) center;
+}
+
+.pepechill {
+/*    z-index: 4;*/
+    position: absolute;
+    width: 289px;
+    height: 165px;
+    margin: 2% auto;
+    background: url("../../public/img/chillPepeTopHover.png") left center;
+    animation: playChill 1.8s steps(17) infinite;
+}
+
+@keyframes playChill {
+    100% { background-position: -4913px; }
+}
+
+.pepechill .chillHov{
+    width: 289px;
+    height: 165px;
+    margin: 2% auto;
+
+}
+
+.pepechill .chillHov:hover {
+    background: url("../../public/img/chillPepeTopHover.png") left center;
+    animation: playHoverChill 1.5s steps(10) infinite;
+}
+@keyframes playHoverChill {
+    100% { background-position: -2890px; }
 }
 
 /* FOOTER */
@@ -61,11 +94,12 @@ footer p {
 .content {
     height: 80%;
     width: 80%;
-    margin: 0 auto 5% auto;
+    margin: 50px auto 5% auto;
     color: rgb(153, 152, 152);
 }
 
 .content h2 {
+    z-index: 2;
     text-align: center;
     font-family: 'Alcubierre', sans-serif;
     font-size: 2em;
@@ -180,6 +214,10 @@ h3 {
         margin-bottom: 0;
     }
 
+    #bottom-header {
+        display: none;
+    }
+
     .col {
         height: 100vh;
         top: 10%;
@@ -216,6 +254,11 @@ h3 {
 
     #header-bottom-line {
         font-size: 1.563em;
+    }
+
+
+    #bottom-header {
+        display: none;
     }
 
     .columns {
