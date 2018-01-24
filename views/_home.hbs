@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<meta charset="utf-8" />
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/core.js"></script>
+		<style>
+
+		</style>
+	</head>
+	<body class="column center">
+		<div class="row center">
+			<img id="meme1" height="100px" width="200px" src="{{meme1.url}}" data-id="{{meme1.id}}">
+			</img>
+			<img id="meme2" height="100px" width="200px" src="{{meme2.url}}" data-id="{{meme2.id}}">
+			</img>
+		</div>
+	</body>
+<script>
+$('#meme1').on('click', () => {
+	$.ajax({
+		type: 'POST',
+		url: '/next',
+		async: true,
+		data: JSON.stringify({
+			liked: {
+				id: $('#meme1').attr('data-id')
+			},
+			viewed: {
+				id: $('#meme2').attr('data-id')
+			}
+		}),
+		dataType: "json",
+		contentType: "application/json",
+		success: (data) => {
+			console.log(data);
+			$('#meme1').attr('data-id', data.meme1.id).attr('src', data.meme1.url);
+			$('#meme2').attr('data-id', data.meme2.id).attr('src', data.meme2.url);	
+		},
+	});
+});
+$('#meme2').on('click', () => {
+	$.ajax({
+		type: 'POST',
+		url: '/next',
+		async: true,
+		data: JSON.stringify({
+			liked: {
+				id: $('#meme2').attr('data-id')
+			},
+			viewed: {
+				id: $('#meme1').attr('data-id')
+			}
+		}),
+		dataType: "json",
+		contentType: "application/json",
+		success: (data) => {
+			console.log(data);
+			$('#meme1').attr('data-id', data.meme1.id).attr('src', data.meme1.url);
+			$('#meme2').attr('data-id', data.meme2.id).attr('src', data.meme2.url);	
+		},
+	});
+});
+</script>
+<html>
