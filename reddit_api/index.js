@@ -39,6 +39,7 @@ module.exports.getMemesFromReddit = new Promise((resolve, reject) => {
 			res.on("end", error => {
 				reject(error);
 			});
+
 		});
 	});
 
