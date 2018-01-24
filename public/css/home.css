@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'Slim Joe';
-    src: url(../../public/fonts/Slim_Joe.otf);
+    src: url(../fonts/Slim_Joe.otf);
 }
 
 @font-face {
     font-family: 'Big John';
-    src: url(../../public/fonts/BIG_JOHN.otf);
+    src: url(../fonts/BIG_JOHN.otf);
 }
 
 @font-face {
     font-family: 'Alcubierre';
-    src: url(../../public/fonts/Alcubierre.otf);
+    src: url(../fonts/Alcubierre.otf);
 }
 
-
+/* HEADER */
 #header-top-line {
     font-family: 'Alcubierre', sans-serif;
     font-size: 6.563em;
@@ -32,17 +32,128 @@
     margin: -15px 0 50px 170px;
 }
 
+/* FOOTER */
 footer {
     width: 100vw;
     position: fixed;
     margin-bottom: 130px;
-    height: 70px;
+    height: 45px;
     background-color: rgb(215, 215, 215);
 }
 
 footer p {
     font-family: 'Slim Joe', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.8);
 }
+
+/* HOME CONTENT */
+.content {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto 5% auto;
+    color: #999898;
+}
+
+.content h2 {
+    text-align: center;
+    font-family: 'Alcubierre', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.meme-pick {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-family: 'Alcubierre', sans-serif;
+    display: flex;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.meme {
+    width: 60%;
+}
+
+.two {
+    margin-left: 10%;
+}
+
+.meme-pic {
+    height: 200px;
+}
+
+.one .meme-pic {
+    background: #797070;
+}
+
+.two .meme-pic {
+    background: #bf71a4;
+}
+
+/* COLUMNS */
+.columns {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+
+.col{
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 6%;
+    height: 90.5%;
+    z-index: 1;
+}
+
+.left {
+    background-image: url(../img/left-col.png);
+    left: 5%;
+    width: 7.5%;
+}
+
+.right {
+    background-image: url(../img/right-col.png);
+    right: 5%;
+    width: 7.99%;
+}
+
+/*
+                    save me :(
+.columns .left-top {
+    background-image: url(../img/left-col-top.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top:5%;
+    width: 175px;
+    height: 70%;
+    z-index: 1;
+}
+.columns .left-mid {
+    background-image: url(../img/left-col-mid.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: absolute;
+    bottom: 58px;
+    width: 175px;
+    height: 18.5%;
+}
+.columns .left-bottom {
+    background-image: url(../img/left-col-bot.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 23px;
+    width: 175px;
+    height: 12.2%;
+    z-index: 1;
+}*/

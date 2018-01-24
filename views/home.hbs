@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{title}}</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<meta charset="utf-8" />
-		<script src="js/jquery-3.2.1.js"></script>
-		<script src="js/core.js"></script>
-		<style>
-
-		</style>
-	</head>
-	<body>
-        {{> header}}
-        {{> bottomheader}}
-        {{> columns}}
-        {{> content}}
-        {{> footer}}
-    </body>
-<html>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <meta charset="utf-8"/>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/core.js"></script>
+</head>
+<body>
+{{> header}}
+{{> bottomheader}}
+{{> columns}}
+<div class="content">
+    <h2>Choose the only winner</h2>
+    <div class="meme-pick">
+        <div class="meme one">
+            <h3>title 1</h3>
+            <div class="meme-pic">
+            </div>
+        </div>
+        <div class="meme two">
+            <h3>title 2</h3>
+            <div class="meme-pic">
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}
+</body>
+</html>
