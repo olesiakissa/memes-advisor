@@ -13,6 +13,8 @@
     src: url(../fonts/Alcubierre.otf);
 }
 
+/*region Main styles*/
+
 /* HEADER */
 #header-top-line {
     font-family: 'Alcubierre', sans-serif;
@@ -27,9 +29,16 @@
     font-size: 2.5em;
     font-weight: 900;
     color: rgb(255, 255, 255);
-    -webkit-text-stroke: 1px rgb(249, 129, 191);
+    -webkit-text-stroke: 0.125px rgb(249, 129, 191);
     letter-spacing: 0.013em;
     margin: -15px 0 50px 170px;
+}
+
+#bottom-header {
+    width: 100vw;
+    margin: 0 auto;
+    position: absolute;
+    background: url(../img/lines.png);
 }
 
 /* FOOTER */
@@ -53,7 +62,7 @@ footer p {
     height: 80%;
     width: 80%;
     margin: 0 auto 5% auto;
-    color: #999898;
+    color: rgb(153, 152, 152);
 }
 
 .content h2 {
@@ -89,11 +98,11 @@ h3 {
 }
 
 .one .meme-pic {
-    background: #797070;
+    background: rgb(121, 112, 112);
 }
 
 .two .meme-pic {
-    background: #bf71a4;
+    background: rgb(191, 113, 164);
 }
 
 /* COLUMNS */
@@ -111,7 +120,7 @@ h3 {
     position: absolute;
     top: 6%;
     height: 90.5%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .left {
@@ -125,6 +134,8 @@ h3 {
     right: 5%;
     width: 7.99%;
 }
+
+/*endregion*/
 
 /*
                     save me :(
@@ -157,3 +168,73 @@ h3 {
     height: 12.2%;
     z-index: 1;
 }*/
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    html {
+        overflow-y: hidden;
+    }
+
+    header {
+        height: 215px;
+        margin-bottom: 0;
+    }
+
+    .col {
+        height: 100vh;
+        top: 10%;
+    }
+
+    .content {
+        margin-top: -50px;
+        margin-bottom: 0;
+        z-index: -1;
+    }
+
+    .meme {
+        align-self: center;
+        width: 40%;
+        margin: 20px auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #header-top-line {
+        font-size: 4.625em;
+    }
+
+    #header-bottom-line {
+        font-size: 1.563em;
+    }
+
+    .columns {
+        display: none;
+    }
+
+    .meme-pick {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .meme {
+        align-self: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    footer {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    footer {
+        /*fix position*/
+    }
+}
