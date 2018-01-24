@@ -28,7 +28,7 @@
     font-family: 'Big John', sans-serif;
     font-size: 2.125em;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: transparent;
     -webkit-text-stroke: 0.125px rgb(249, 129, 191);
     letter-spacing: 0.013em;
     margin: -20px 0 50px 170px;
