@@ -45,33 +45,23 @@
     background: url(../img/lines.png) center;
 }
 
-.pepechill {
-/*    z-index: 4;*/
-    position: absolute;
-    width: 289px;
-    height: 165px;
-    margin: 2% auto;
-    background: url("../../public/img/chillPepeTopHover.png") left center;
-    animation: playChill 1.8s steps(17) infinite;
+/* NAVIGATION */
+
+.link {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgb(249, 129, 191);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
 }
 
-@keyframes playChill {
-    100% { background-position: -4913px; }
-}
-
-.pepechill .chillHov{
-    width: 289px;
-    height: 165px;
-    margin: 2% auto;
-
-}
-
-.pepechill .chillHov:hover {
-    background: url("../../public/img/chillPepeTopHover.png") left center;
-    animation: playHoverChill 1.5s steps(10) infinite;
-}
-@keyframes playHoverChill {
-    100% { background-position: -2890px; }
+nav li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 /* FOOTER */
@@ -216,6 +206,10 @@ h3 {
 
     #bottom-header {
         display: none;
+    }
+
+    nav {
+        margin-bottom: 60px;
     }
 
     .col {
