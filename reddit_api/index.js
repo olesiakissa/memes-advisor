@@ -6,7 +6,7 @@ module.exports = {
 }
 
 const https = require("https");
-const url = "https://www.reddit.com/r/dankmemes/search.json?restrict_sr=on&t=all";
+const url = "https://www.reddit.com/r/dankmemes/search.json?restrict_sr=on&t=all&limit=100";
 const jsonPic = require("./../analysis/jsonPic.js");
 
 module.exports.getMemesFromReddit = new Promise((resolve, reject) => {
@@ -23,8 +23,10 @@ module.exports.getMemesFromReddit = new Promise((resolve, reject) => {
 				let children = body.data.children;
 				let length = children.length;
 				for (var i = 0; i < length; i++) {
-					let objPost = new jsonPic(children[i].data.id, children[i].data.title, children[i].data.url, 0, 0);
-					posts.add(objPost);
+					if (children[i].data.url.replace("&amp;", "&").endsWith('.jpg') || children[i].data.url.replace("&amp;", "&").endsWith('.png')) {
+						let objPost = new jsonPic(children[i].data.id, children[i].data.title, children[i].data.url.replace("&amp;", "&"), 0, 0);
+						posts.add(objPost);
+					}
 				}
 				// children.forEach(function(item) {
 					// let objPost = {};
