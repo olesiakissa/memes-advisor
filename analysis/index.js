@@ -19,8 +19,10 @@ module.exports.getNextTwoMemes = function(jsonArray) {
         index1 = generateIndex(jsonArray);
         index2 = generateIndex(jsonArray);
 	} while ( (index1 === index2) || (!(viewsIsValid(index1, jsonArray) && viewsIsValid(index2, jsonArray))) );
-    memes.push(jsonArray[index1], jsonArray[index2]);
-	return memes;
+    if ((index1 !== index2) && (viewsIsValid(index1, jsonArray) && viewsIsValid(index2, jsonArray))) {
+        memes.push(jsonArray[index1], jsonArray[index2]);
+        return memes;
+    } else return false;
 }
 
 function viewsIsValid(index, array) {
