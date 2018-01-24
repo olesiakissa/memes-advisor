@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Slim Joe';
+    src: url(../fonts/Slim_Joe.otf);
+}
+
+@font-face {
+    font-family: 'Big John';
+    src: url(../fonts/BIG_JOHN.otf);
+}
+
+@font-face {
+    font-family: 'Alcubierre';
+    src: url(../fonts/Alcubierre.otf);
+}
+
+/*region Main styles*/
+
+/* HEADER */
+#header-top-line {
+    font-family: 'Alcubierre', sans-serif;
+    font-size: 5.5em;
+    font-weight: 100;
+    color: rgb(249, 129, 191);
+    margin-top: 15px;
+}
+
+#header-bottom-line {
+    font-family: 'Big John', sans-serif;
+    font-size: 2.125em;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 0.125px rgb(249, 129, 191);
+    letter-spacing: 0.013em;
+    margin: -20px 0 50px 170px;
+}
+
+#bottom-header {
+    z-index: -1;
+    width: 75%;
+   /* margin: 0 auto 5% auto;*/
+    position: absolute;
+    top: 25%;
+    height: 100px;
+    background-size: contain;
+    background: url(../img/lines.png) center;
+}
+
+/* NAVIGATION */
+
+.link {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgb(249, 129, 191);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+}
+
+nav li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* FOOTER */
+footer {
+    width: 100vw;
+    position: fixed;
+    margin-bottom: 130px;
+    height: 45px;
+    background-color: rgb(215, 215, 215);
+}
+
+footer p {
+    font-family: 'Slim Joe', sans-serif;
+    font-size: 1.5em;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* HOME CONTENT */
+.content {
+    height: 80%;
+    width: 80%;
+    margin: 50px auto 5% auto;
+    color: rgb(153, 152, 152);
+}
+
+.content h2 {
+    z-index: 2;
+    text-align: center;
+    font-family: 'Alcubierre', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.meme-pick {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-family: 'Alcubierre', sans-serif;
+    display: flex;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.meme {
+    width: 60%;
+}
+
+.two {
+    margin-left: 10%;
+}
+
+.meme-pic {
+    height: 200px;
+}
+
+.one .meme-pic {
+    background: rgb(121, 112, 112);
+}
+
+.two .meme-pic {
+    background: rgb(191, 113, 164);
+}
+
+/* COLUMNS */
+.columns {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+
+.col {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 6%;
+    height: 90.5%;
+    z-index: 2;
+}
+
+.left {
+    background-image: url(../img/left-col.png);
+    left: 5%;
+    width: 7.5%;
+}
+
+.right {
+    background-image: url(../img/right-col.png);
+    right: 5%;
+    width: 7.99%;
+}
+
+/*endregion*/
+
+/*
+                    save me :(
+.columns .left-top {
+    background-image: url(../img/left-col-top.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top:5%;
+    width: 175px;
+    height: 70%;
+    z-index: 1;
+}
+.columns .left-mid {
+    background-image: url(../img/left-col-mid.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: absolute;
+    bottom: 58px;
+    width: 175px;
+    height: 18.5%;
+}
+.columns .left-bottom {
+    background-image: url(../img/left-col-bot.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 23px;
+    width: 175px;
+    height: 12.2%;
+    z-index: 1;
+}*/
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    html {
+        overflow-y: hidden;
+    }
+
+    header {
+        height: 215px;
+        margin-bottom: 0;
+    }
+
+    #bottom-header {
+        display: none;
+    }
+
+    nav {
+        margin-bottom: 60px;
+    }
+
+    .col {
+        height: 100vh;
+        top: 10%;
+    }
+
+    .content {
+        margin-top: -50px;
+        margin-bottom: 0;
+        z-index: -1;
+    }
+
+    .meme {
+        align-self: center;
+        width: 40%;
+        margin: 20px auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    html {
+        height: auto !important;
+    }
+
+    body {
+        height: 100%;
+        background-size: cover;
+    }
+
+    #header-top-line {
+        font-size: 4.625em;
+    }
+
+    #header-bottom-line {
+        font-size: 1.563em;
+    }
+
+
+    #bottom-header {
+        display: none;
+    }
+
+    .columns {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .meme-pick {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .meme {
+        align-self: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .one {
+        margin-bottom: 5%;
+    }
+
+    footer {
+        margin-top: 10%;
+        width: 100%;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 50px;
+    }
+}

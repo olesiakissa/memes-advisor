@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{title}}</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<meta charset="utf-8" />
-		<script src="js/jquery-3.2.1.js"></script>
-		<script src="js/core.js"></script>
-		<style>
-
-		</style>
-	</head>
-	<body>
-		
-	</body>
-<html>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <meta charset="utf-8"/>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/core.js"></script>
+</head>
+<body>
+{{> header}}
+{{> bottomheader}}
+{{> columns}}
+{{#each memes}}
+	<img src="{{this.url}}"></img>{{this.stats}}
+{{/each}}
+{{> footer}}
+</body>
+</html>

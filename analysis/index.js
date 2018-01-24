@@ -11,7 +11,7 @@ var jsonPic = require("./jsonPic.js");
 // Array must be initialized from file
 var memes = [];
 
-function getNextTwoMemes(jsonArray) {
+module.exports.getNextTwoMemes = function(jsonArray) {
 	let index1, index2;
 	let memes = [];
     // Avoid picking equal indexes and indexes where elements already have more than 5 views
@@ -35,7 +35,7 @@ function generateIndex(jsonArray) {
 }
 
 // Increments the amount of likes and views of pictures
-function setStatsForPictures(picture, chosenPicture, originalArray) {
+module.exports.setStatsForPictures = function(picture, chosenPicture, originalArray) {
     let picsWithStats = [];
 	let tempPicture = findPictureById(picture.id, originalArray);
     let tempChosenPicture = findPictureById(chosenPicture.id, originalArray);
@@ -59,14 +59,14 @@ function findPictureById(id, array) {
 
 // Use this function only at the end of 1 hour interval
 // Returns array of pictures sorted by their stats
-function getTopMemes(memesArray) {
+module.exports.getTopMemes = function(memesArray) {
     memesArray.sort(function (a, b) {
         return b.stats - a.stats;
     });
 
-    for (let i = 0; i < memesArray.length; i++) {
-        memesArray[i] = JSON.stringify(memesArray[i]);
-    }
+    // for (let i = 0; i < memesArray.length; i++) {
+        // memesArray[i] = JSON.stringify(memesArray[i]);
+    // }
 
     return memesArray;
 }
