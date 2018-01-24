@@ -2,6 +2,8 @@
 
 *Memes advisor is a service that allows you to pick the best meme among two that are taken from Reddit and randomly shown on the main page. You can not only choose the best but also see a statistics of most popular memes on a specific page.*
 
+**You can check project [here](http://52.15.225.70:8080/)**
+
 Memes are taken from Reddit using RedditAPI. After the first portion of memes has been loaded from server, they are randomly shown on the page. 
 
 When user chooses the best one via ajax request 'like' is sent to meme property and increments it. Next pair of memes is loaded after the previous best one has been chosen. 
