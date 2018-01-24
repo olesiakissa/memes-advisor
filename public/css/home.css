@@ -37,7 +37,6 @@
 #bottom-header {
     z-index: -1;
     width: 75%;
-   /* margin: 0 auto 5% auto;*/
     position: absolute;
     top: 25%;
     height: 100px;
@@ -49,6 +48,8 @@
 
 .link {
     display: inline-block;
+    position: relative;
+    z-index: 3;
     width: 50px;
     height: 20px;
     margin: 0 10px;
@@ -60,7 +61,7 @@
     align-self: center;
 }
 
-nav li:hover {
+nav li:hover, .meme-pic:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -118,6 +119,8 @@ h3 {
 }
 
 .meme-pic {
+    position: relative;
+    z-index: 9999;
     height: 200px;
 }
 
@@ -158,40 +161,6 @@ h3 {
     right: 5%;
     width: 7.99%;
 }
-
-/*endregion*/
-
-/*
-                    save me :(
-.columns .left-top {
-    background-image: url(../img/left-col-top.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top:5%;
-    width: 175px;
-    height: 70%;
-    z-index: 1;
-}
-.columns .left-mid {
-    background-image: url(../img/left-col-mid.png);
-    background-repeat: repeat-y;
-    background-size: contain;
-    position: absolute;
-    bottom: 58px;
-    width: 175px;
-    height: 18.5%;
-}
-.columns .left-bottom {
-    background-image: url(../img/left-col-bot.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: 23px;
-    width: 175px;
-    height: 12.2%;
-    z-index: 1;
-}*/
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 
