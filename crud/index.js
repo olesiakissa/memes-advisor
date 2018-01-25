@@ -6,7 +6,7 @@ module.exports = {
 };
 
 const fs = require("fs");
-const path = "crud/data/example.json";
+const path = "crud/data/memes.json";
 var dataSet;
 
 // Receives Set and parses it to json

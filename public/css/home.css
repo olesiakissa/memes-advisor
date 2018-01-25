@@ -31,7 +31,7 @@
     color: transparent;
     -webkit-text-stroke: 0.125px rgb(249, 129, 191);
     letter-spacing: 0.013em;
-    margin: -20px 0 50px 170px;
+    margin: -20px 0 25px 170px;
 }
 
 #bottom-header {
@@ -47,6 +47,9 @@
 /* NAVIGATION */
 
 .link {
+    font-family: 'Slim Joe', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
     display: inline-block;
     position: relative;
     z-index: 3;
@@ -67,11 +70,11 @@ nav li:hover, .meme-pic:hover {
 
 /* FOOTER */
 footer {
-    width: 100vw;
-    position: fixed;
-    margin-bottom: 130px;
+    width: 100%;
+    position: relative;
     height: 45px;
     background-color: rgb(215, 215, 215);
+    text-align: center;
 }
 
 footer p {
@@ -79,14 +82,27 @@ footer p {
     font-size: 1.5em;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    margin-top: 11.5%;
+    margin-left: -200%;
+}
+
+.footer-text {
+    background: url(../img/footertext.png) center no-repeat;
+    background-size: auto;
+    display: inline-block;
+    margin-top: 0.1%;
+    margin-left: 8%;
 }
 
 /* HOME CONTENT */
+
 .content {
     height: 80%;
     width: 80%;
-    margin: 50px auto 5% auto;
+    margin: 25px auto 15px auto;
     color: rgb(153, 152, 152);
+    overflow: hidden;
 }
 
 .content h2 {
@@ -107,32 +123,25 @@ footer p {
 
 h3 {
     margin: 0;
-    font-weight: 400;
+    font-weight: bold;
+    font-size: .5em;
+
 }
 
 .meme {
-    width: 60%;
-}
-
-.two {
-    margin-left: 10%;
+    margin: 0 auto;
+    width: 300px;
 }
 
 .meme-pic {
     position: relative;
     z-index: 9999;
-    height: 200px;
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
 }
 
-.one .meme-pic {
-    background: rgb(121, 112, 112);
-}
-
-.two .meme-pic {
-    background: rgb(191, 113, 164);
-}
-
-/* COLUMNS */
+/*region COLUMNS*/
 .columns {
     height: 100%;
     width: 90%;
@@ -145,7 +154,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: 6%;
+    top: 8.5%;
     height: 90.5%;
     z-index: 2;
 }
@@ -161,6 +170,8 @@ h3 {
     right: 5%;
     width: 7.99%;
 }
+
+/*endregion*/
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 
@@ -215,7 +226,6 @@ h3 {
     #header-bottom-line {
         font-size: 1.563em;
     }
-
 
     #bottom-header {
         display: none;

@@ -1,0 +1,57 @@
+.meme-col {
+    width: 100%;
+}
+
+.popularity-col {
+    width: 100%;
+    font-family: 'Alcubierre', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px;
+}
+
+.pic {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+#fullsizeMeme {
+    width: 100%;
+    height: 80%;
+    z-index: 150;
+    object-fit: contain;
+}
+
+img {
+    object-fit: scale-down;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70) !important;
+    display: none;
+    z-index: 5;
+}
+
+#fullsize {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    display: none;
+    overflow: hidden;
+    z-index: 10;
+}
+

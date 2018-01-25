@@ -12,13 +12,20 @@
 {{> bottomheader}}
 {{> columns}}
 <div class="column center">
-{{#each memes}}
-	<div class="row center" style="margin: 20px;">
-		<img class="meme-pic" src="{{this.url}}"></img>
-		<div style="margin: 20px; font-family: 'Alcubierre', sans-serif; font-size: 2em;">{{this.stats}}%</div>
-	</div>
-{{/each}}
-{{> footer}}
+    {{#each memes}}
+        <div class="row center" style="margin: 20px; ">
+            <div class="column meme-col">
+                <img class="meme-pic pic" src="{{this.url}}"/>
+            </div>
+            <div class="column popularity-col">{{this.stats}}%
+            </div>
+        </div>
+        <div id="overlay"></div>
+        <div id="fullsize">
+            <img id="fullsizeMeme"  class="open" src=""/>
+        </div>
+    {{/each}}
+    {{> footer}}
 </div>
 </body>
 </html>
