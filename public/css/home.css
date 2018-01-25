@@ -42,20 +42,19 @@
 /*region HEADER*/
 #header-top-line {
     font-family: 'Alcubierre', sans-serif;
-    font-size: 5.5em;
+    font-size: 4.5em;
     font-weight: 100;
     color: rgb(249, 129, 191);
-    margin-top: 15px;
 }
 
 #header-bottom-line {
     font-family: 'Big John', sans-serif;
-    font-size: 2.125em;
+    font-size: 1.75em;
     font-weight: 900;
     color: transparent;
     -webkit-text-stroke: 0.125px rgb(249, 129, 191);
     letter-spacing: 0.013em;
-    margin: -20px 0 25px 170px;
+    margin: -10px 0 0 100px;
 }
 
 #bottom-header {
@@ -69,7 +68,15 @@
 }
 /*endregion*/
 
-/*region NAVIGATION*/
+/*region NAVIGATION */
+
+nav {
+    display: flex;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .link {
     font-family: 'Slim Joe', sans-serif;
     font-size: 1em;
@@ -96,11 +103,10 @@ nav li:hover, .meme-pic:hover {
 /*region FOOTER*/
 footer {
     width: 100%;
-    position: relative;
-    bottom:0;
     height: 45px;
     background-color: rgb(215, 215, 215);
     text-align: center;
+    flex-shrink: 0;
 }
 
 footer p {
@@ -121,14 +127,15 @@ footer p {
     margin-left: 8%;
 }
 /*endregion*/
-
+.container {
+    min-height: calc(100vh - 70px);
+}
 /* HOME CONTENT */
 .content {
-    height: 80%;
+    height: 100%;
     width: 80%;
     margin: 25px auto 15px auto;
     color: rgb(153, 152, 152);
-    overflow: hidden;
 }
 
 .content h2 {
@@ -155,12 +162,14 @@ h3 {
 }
 
 .meme {
-    margin: 0 auto;
+    position: relative;
+    margin: 0 auto 2.9% auto;
     width: 30%;
+    padding-bottom: 30%;
 }
 
 .meme-pic {
-    position: relative;
+    position: absolute;
     z-index: 9999;
     height: 100%;
     width: 90%;
@@ -200,17 +209,13 @@ h3 {
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 
-    header {
-        height: 215px;
-        margin-bottom: 0;
-    }
-
     #bottom-header {
         display: none;
     }
 
     nav {
-        margin-bottom: 60px;
+        display: flex;
+        margin: 10px auto;
     }
 
     .col {
@@ -220,7 +225,6 @@ h3 {
     }
 
     .content {
-        margin-top: -50px;
         margin-bottom: 0;
         z-index: -1;
     }
@@ -275,8 +279,9 @@ h3 {
 
     .meme {
         align-self: center;
+        margin: 5% 5%;
         width: 70%;
-        margin: 0 auto;
+        padding-bottom: 70%;
     }
 
     .one {
