@@ -12,9 +12,9 @@
     font-family: 'Alcubierre';
     src: url(../fonts/Alcubierre.otf);
 }
-
 /*region Main styles*/
 
+/*region TOP BUTTON*/
 #top-btn {
     width: 60px;
     height: auto;
@@ -31,13 +31,15 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
     padding: 15px;
+    font-family: 'Alcubierre', sans-serif;
 }
 
 #top-btn:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
+/*endregion*/
 
-/* HEADER */
+/*region HEADER*/
 #header-top-line {
     font-family: 'Alcubierre', sans-serif;
     font-size: 5.5em;
@@ -65,9 +67,9 @@
     background-size: contain;
     background: url(../img/lines.png) center;
 }
+/*endregion*/
 
-/* NAVIGATION */
-
+/*region NAVIGATION*/
 .link {
     font-family: 'Slim Joe', sans-serif;
     font-size: 1em;
@@ -89,11 +91,13 @@
 nav li:hover, .meme-pic:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+/*endregion*/
 
-/* FOOTER */
+/*region FOOTER*/
 footer {
     width: 100%;
     position: relative;
+    bottom:0;
     height: 45px;
     background-color: rgb(215, 215, 215);
     text-align: center;
@@ -116,9 +120,9 @@ footer p {
     margin-top: 0.1%;
     margin-left: 8%;
 }
+/*endregion*/
 
 /* HOME CONTENT */
-
 .content {
     height: 80%;
     width: 80%;
@@ -136,7 +140,7 @@ footer p {
 }
 
 .meme-pick {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     font-size: 1.5em;
     font-family: 'Alcubierre', sans-serif;
@@ -152,24 +156,24 @@ h3 {
 
 .meme {
     margin: 0 auto;
-    width: 300px;
+    width: 30%;
 }
 
 .meme-pic {
     position: relative;
     z-index: 9999;
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 90%;
     object-fit: contain;
 }
 
 /*region COLUMNS*/
 .columns {
     height: 100%;
-    width: 90%;
+    width: 100%;
     position: absolute;
     top: 0;
-    left: 5%;
+    /*left: 5%;*/
 }
 
 .col {
@@ -192,7 +196,6 @@ h3 {
     right: 5%;
     width: 7.99%;
 }
-
 /*endregion*/
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -284,8 +287,6 @@ h3 {
         margin-top: 10%;
         width: 100%;
         position: relative;
-        left: 0;
         bottom: 0;
-        margin-bottom: 50px;
     }
 }
