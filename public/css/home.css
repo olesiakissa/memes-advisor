@@ -40,20 +40,19 @@
 /* HEADER */
 #header-top-line {
     font-family: 'Alcubierre', sans-serif;
-    font-size: 5.5em;
+    font-size: 4.5em;
     font-weight: 100;
     color: rgb(249, 129, 191);
-    margin-top: 15px;
 }
 
 #header-bottom-line {
     font-family: 'Big John', sans-serif;
-    font-size: 2.125em;
+    font-size: 1.75em;
     font-weight: 900;
     color: transparent;
     -webkit-text-stroke: 0.125px rgb(249, 129, 191);
     letter-spacing: 0.013em;
-    margin: -20px 0 25px 170px;
+    margin: -10px 0 0 100px;
 }
 
 #bottom-header {
@@ -67,6 +66,13 @@
 }
 
 /* NAVIGATION */
+
+nav {
+    display: flex;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .link {
     font-family: 'Slim Joe', sans-serif;
@@ -197,17 +203,13 @@ h3 {
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 
-    header {
-        height: 215px;
-        margin-bottom: 0;
-    }
-
     #bottom-header {
         display: none;
     }
 
     nav {
-        margin-bottom: 60px;
+        display: flex;
+        margin: 10px auto;
     }
 
     .col {
@@ -217,7 +219,6 @@ h3 {
     }
 
     .content {
-        margin-top: -50px;
         margin-bottom: 0;
         z-index: -1;
     }
