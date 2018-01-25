@@ -52,7 +52,7 @@ app.get("/", function(request, response){
 	//console.log(arraymemes);
 	let memes = analysis.getNextTwoMemes(arraymemes);
 	response.render('home.hbs',{
-		title: 'memes-advisor',
+		title: 'Memes Advisor',
 		meme1: memes[0],
 		meme2: memes[1]
 	});
@@ -68,7 +68,7 @@ app.get("/statistic", function(request, response){
         stats[i].stats = (array[i].stats*100).toFixed(1);
     }
 	response.render('statistic.hbs',{
-		title: 'memes-advisor: statistic',
+		title: 'Memes Advisor - Statistic',
 		memes: stats
 	});
 });
